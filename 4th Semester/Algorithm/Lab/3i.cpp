@@ -20,7 +20,6 @@ int main(){
     int m,n;
     cout<<"Enter Matrix size: ";
     cin>>m>>n;
-
     int a[10][10];
     matrix(m,n,a);
     
