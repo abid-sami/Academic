@@ -17,6 +17,6 @@ int main(){
                 zero++;
             }
         }
+        cout<<zero+(neg%2)*2<<endl;
     }
-    cout<<
 }

@@ -5,13 +5,16 @@ int main(){
     int t;
     cin>>t;
     while(t--){
-        int a, b;
+        int a,b;
         cin>>a>>b;
-        if(b%2==0){
+        if(a==b){
             cout<<0<<endl;
         }
+        else if(a%b==0 || b%a==0){
+            cout<<1<<endl;
+        }
         else{
-            cout<<a<<endl;
+            cout<<2<<endl;
         }
     }
 }
