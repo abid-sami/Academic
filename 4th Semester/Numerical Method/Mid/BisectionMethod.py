@@ -24,7 +24,7 @@ def Bisection(xl, xu, max_itr=500, eps=0.05):
         xr_new=(xl + xu)/2
         ae=fabs(xr_new - xr_old)
         xr_old=xr_new
-        itr=itr+1 
+        itr+=1 
         if ae<=eps or itr>max_itr:
             break
     return xr_old
