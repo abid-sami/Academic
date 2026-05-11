@@ -30,3 +30,4 @@ plt.scatter(x,y, label="Data Point", color="red")
 plt.plot(x,y_pred, label="Degree 2 fitted curve", color="blue")
 plt.legend()
 plt.show()
+
