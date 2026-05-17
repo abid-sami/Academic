@@ -4,19 +4,19 @@ import matplotlib.pyplot as plt
 x=np.array([1,3,4,6], dtype=float)
 y=np.array([0.63,2.05,4.08,10.78], dtype=float)
 
-n=2
+n=2 
 m=len(x)
 
-x_sum=[np.sum(x**k) for k in range(2*n+1)]
-y_sum=[np.sum((x**k)*y) for k in range(n+1)]
+sum_x=[np.sum(x**k) for k in range(2*n+1)]
+sum_y=[np.sum((x**k)*y) for k in range(n+1)]
 
 A=np.zeros((n+1, n+1))
 B=np.zeros(n+1)
 
 for i in range(n+1):
     for j in range(n+1):
-        A[i,j]=x_sum[i+j]
-    B[i]=y_sum[i]
+        A[i,j]=sum_x[i+j]
+    B[i]=sum_y[i]
     
 a=np.linalg.solve(A,B)
 print(f"Polinominal coefficients a0, a1, a3 are: ",a)

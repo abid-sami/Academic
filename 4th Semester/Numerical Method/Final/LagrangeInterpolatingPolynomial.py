@@ -14,17 +14,20 @@ def LagrangeInterpolation(x_values, y_values, x):
                 term=term*(x-x_values[j])/(x_values[i]-x_values[j])
         result+=term
     return result   
+
 x_points=np.linspace(1,5,200)
-print(x_points[1])
 y_points=[]
+
 for x in x_points:
     y=LagrangeInterpolation(x_values, y_values, x)
     y_points.append(y)
     
 plt.plot(x_points, y_points, color="blue", label="Lagrange Polynomial")   
 plt.scatter(x_values, y_values, color="red", label="Data Point")
+
 plt.xlabel('x')
 plt.ylabel('y') 
+
 plt.legend()
 plt.grid(True)
 plt.show()

@@ -6,7 +6,7 @@ def trapezoidal_rule(Xo,Xn,n):
     total=func(Xo)+func(Xn)
     Xi=Xo
     for i in range(1, int(n)):
-        Xi=Xi+h
+        Xi+=h
         total+=2*func(Xi)
     return (h/2)*total
 

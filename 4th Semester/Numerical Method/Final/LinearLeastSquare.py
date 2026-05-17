@@ -8,6 +8,7 @@ x=np.array([1,2,3,4,5])
 y=np.array([0.6, 2.4, 3.5, 4.8, 5.7])
 m=len(x)
 print("Total number of data: ", m)
+
 sum_x=np.sum(x)
 sum_y=np.sum(y)
 sum_x2=np.sum(x*x)
