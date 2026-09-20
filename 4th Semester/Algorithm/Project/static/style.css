@@ -1,0 +1,76 @@
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+    135deg,
+    #141e30,
+    #243b55);
+    font-family:Arial;
+}
+
+.container{
+    width:95%;
+    max-width:1100px;
+    padding:25px;
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(20px);
+    border-radius:20px;
+    color:white;
+    text-align:center;
+}
+
+.controls{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+select,button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+}
+
+button{
+    background:#00e5ff;
+    cursor:pointer;
+}
+
+svg{
+    background:white;
+    border-radius:15px;
+}
+
+line{
+    stroke:#999;
+    stroke-width:8;
+}
+
+circle{
+    fill:#3498db;
+}
+
+#car{
+    fill:red;
+}
+
+.route{
+    stroke:#00ff66 !important;
+    stroke-width:10;
+    animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        stroke-width:15;
+    }
+}
+
+#result{
+    margin-top:20px;
+    font-size:22px;
+}

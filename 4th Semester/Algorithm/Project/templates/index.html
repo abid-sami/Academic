@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rajshahi Smart Route Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🚗 Rajshahi Smart Route Finder</h1>
+
+    <div class="controls">
+
+        <select id="source">
+            <option>Shaheb Bazar</option>
+            <option>Talaimari</option>
+            <option>Kazla</option>
+            <option>Rajshahi University</option>
+            <option>Rail Gate</option>
+            <option>Laxmipur</option>
+        </select>
+
+        <select id="destination">
+            <option>Rajshahi University</option>
+            <option>Kazla</option>
+            <option>Talaimari</option>
+            <option>Shaheb Bazar</option>
+            <option>Rail Gate</option>
+            <option>Laxmipur</option>
+        </select>
+
+        <button onclick="findRoute()">Find Route</button>
+
+    </div>
+
+    <svg id="map" width="900" height="500">
+
+        <line id="line1" x1="100" y1="250" x2="250" y2="180"/>
+        <line id="line2" x1="250" y1="180" x2="450" y2="180"/>
+        <line id="line3" x1="450" y1="180" x2="650" y2="250"/>
+
+        <circle cx="100" cy="250" r="20"/>
+        <text x="60" y="290">Shaheb Bazar</text>
+
+        <circle cx="250" cy="180" r="20"/>
+        <text x="220" y="150">Talaimari</text>
+
+        <circle cx="450" cy="180" r="20"/>
+        <text x="430" y="150">Kazla</text>
+
+        <circle cx="650" cy="250" r="20"/>
+        <text x="590" y="300">RU</text>
+
+        <circle id="car" cx="100" cy="250" r="12"/>
+    </svg>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
